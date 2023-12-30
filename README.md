@@ -1,32 +1,12 @@
-# Hi there! 👋 I'm Varattaya Panyachotchuang, a Computer Science student from Silpakorn University.
+# Hi there! 👋 I'm Varattaya Panyachotchuang.
 
-## About Me
+## 🧑‍About Me
+- 🏫 I am a computer science student from Silpakorn University
+- 👁 ️I’m interested in working and learning in the Frontend
+- 💻 In my free time, I like to play games🎮 and code. 
 
-I am a passionate and dedicated computer science student with a keen interest in Frontend development. Eager to learn and contribute to the world of technology, I am always exploring new concepts and keeping up with the latest trends in the field.
 
 ## Skills
 
-- **Languages:** Java, JavaScript, Python
-- **Databases:** MySQL
-- **Other Technologies:** (Feel free to add any other technologies you're familiar with)
+<p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
 
-## Projects
-
-- [Project Name](link-to-project) - Brief description
-- [Project Name](link-to-project) - Brief description
-- ...
-
-## Education
-
-- **B.Sc. in Computer Science** - Silpakorn University (Year of Enrollment - Year of Graduation)
-
-## Interests
-
-I am particularly interested in frontend development and am actively seeking opportunities to apply and expand my skills in this area.
-
-## Connect with Me
-
-- [LinkedIn](link-to-your-linkedin-profile)
-- [Portfolio (if applicable)](link-to-your-portfolio)
-
-Feel free to reach out if you share similar interests or have exciting opportunities to discuss. Let's connect and create something amazing together!
