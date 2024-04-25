@@ -1,16 +1,20 @@
 name: Generate Snake
 
+# Controls when the action will run.
 on:
   schedule:
-    # Run every 5 minutes
-    - cron: "*/1 * * * *"
+      # every 12 hours
+      - cron: "0 */12 * * *"
 
-  # Run on workflow_dispatch and every push on the main branch
+  # This command allows us to run the Action automatically from the Actions tab.
   workflow_dispatch:
+  
+  # Also run on every push on the master branch
   push:
     branches:
-      - main
+    - main
 
+# The sequence of runs in this workflow:
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -28,25 +32,11 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/GitHub-contribution-grid-snake.svg
-            dist/GitHub-contribution-grid-snake-dark.svg?palette=dark
-            dist/GitHub-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=dark
+            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Copy dark mode SVG
-        run: cp dist/GitHub-contribution-grid-snake-dark.svg dist/GitHub-contribution-grid-snake-dark-modified.svg
-
-      - name: Edit dark mode SVG
-        run: |
-          sed -i 's/fill: #1c1e26/fill: #bfd6f6/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
-          sed -i 's/fill: #2f333a/fill: #8dbdff/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
-          sed -i 's/fill: #586069/fill: #64a1f4/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
-          sed -i 's/fill: #6a737d/fill: #4b91f1/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
-          sed -i 's/fill: #959da5/fill: #3c7dd9/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
-
-      - name: Replace original dark mode SVG
-        run: mv dist/GitHub-contribution-grid-snake-dark-modified.svg dist/GitHub-contribution-grid-snake-dark.svg
 
       - name: Show build status
         run: git status
