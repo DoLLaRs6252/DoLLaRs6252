@@ -34,16 +34,19 @@ jobs:
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Modify file permissions
-        run: chmod +w dist/GitHub-contribution-grid-snake-dark.svg
+      - name: Copy dark mode SVG
+        run: cp dist/GitHub-contribution-grid-snake-dark.svg dist/GitHub-contribution-grid-snake-dark-modified.svg
 
       - name: Edit dark mode SVG
         run: |
-          sed -i 's/fill: #1c1e26/fill: #bfd6f6/g' dist/GitHub-contribution-grid-snake-dark.svg
-          sed -i 's/fill: #2f333a/fill: #8dbdff/g' dist/GitHub-contribution-grid-snake-dark.svg
-          sed -i 's/fill: #586069/fill: #64a1f4/g' dist/GitHub-contribution-grid-snake-dark.svg
-          sed -i 's/fill: #6a737d/fill: #4b91f1/g' dist/GitHub-contribution-grid-snake-dark.svg
-          sed -i 's/fill: #959da5/fill: #3c7dd9/g' dist/GitHub-contribution-grid-snake-dark.svg
+          sed -i 's/fill: #1c1e26/fill: #bfd6f6/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
+          sed -i 's/fill: #2f333a/fill: #8dbdff/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
+          sed -i 's/fill: #586069/fill: #64a1f4/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
+          sed -i 's/fill: #6a737d/fill: #4b91f1/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
+          sed -i 's/fill: #959da5/fill: #3c7dd9/g' dist/GitHub-contribution-grid-snake-dark-modified.svg
+
+      - name: Replace original dark mode SVG
+        run: mv dist/GitHub-contribution-grid-snake-dark-modified.svg dist/GitHub-contribution-grid-snake-dark.svg
 
       - name: Show build status
         run: git status
