@@ -34,6 +34,9 @@ jobs:
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Modify file permissions
+        run: chmod +w dist/GitHub-contribution-grid-snake-dark.svg
+
       - name: Edit dark mode SVG
         run: |
           sed -i 's/fill: #1c1e26/fill: #bfd6f6/g' dist/GitHub-contribution-grid-snake-dark.svg
